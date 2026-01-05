@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "Parper Reference: 学术文献引用助手",
+  "version": "2.0",
+  "description": "专业版：多源检索论文，一键生成GB/T 7714引用，支持自定义镜像。",
+  "permissions": ["sidePanel", "contextMenus", "storage"],
+  "host_permissions": [
+    "https://api.semanticscholar.org/*",
+    "https://api.crossref.org/*",
+    "http://export.arxiv.org/*"   
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "side_panel": {
+    "default_path": "sidepanel.html"
+  },
+  "icons": { "48": "icon.png" }
+}

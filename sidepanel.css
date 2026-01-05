@@ -1,0 +1,79 @@
+:root {
+  --primary: #0078d4;
+  --bg: #f3f4f6;
+  --card-bg: #ffffff;
+  --text-main: #1f2937;
+  --text-sub: #6b7280;
+  --border: #e5e7eb;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 16px;
+  background-color: var(--bg);
+  color: var(--text-main);
+}
+
+/* 顶部栏 */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+.header h2 { margin: 0; font-size: 16px; font-weight: 600; }
+.icon-btn { cursor: pointer; background: none; border: none; font-size: 18px; padding: 4px; color: var(--text-sub); }
+.icon-btn:hover { color: var(--primary); }
+
+/* 搜索框 */
+.search-container { display: flex; gap: 8px; margin-bottom: 16px; }
+input[type="text"] {
+  flex: 1; padding: 8px 12px; border: 1px solid var(--border); border-radius: 6px; outline: none; font-size: 13px;
+}
+input:focus { border-color: var(--primary); box-shadow: 0 0 0 2px rgba(0,120,212,0.1); }
+.btn-primary {
+  background: var(--primary); color: white; border: none; padding: 8px 16px; border-radius: 6px; cursor: pointer; font-size: 13px; font-weight: 500;
+}
+.btn-primary:hover { opacity: 0.9; }
+
+/* 结果列表 */
+.card {
+  background: var(--card-bg); border-radius: 8px; padding: 12px; margin-bottom: 12px;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.05); border: 1px solid transparent; transition: all 0.2s;
+}
+.card:hover { border-color: var(--primary); transform: translateY(-1px); box-shadow: 0 4px 6px rgba(0,0,0,0.05); }
+
+.paper-title { display: block; font-size: 14px; font-weight: 600; color: #111827; text-decoration: none; margin-bottom: 4px; line-height: 1.4; }
+.paper-title:hover { color: var(--primary); text-decoration: underline; }
+
+.paper-meta { font-size: 12px; color: var(--text-sub); margin-bottom: 8px; display: flex; flex-wrap: wrap; gap: 6px; align-items: center;}
+.tag { background: #e0f2fe; color: #0369a1; padding: 2px 6px; border-radius: 4px; font-size: 10px; font-weight: 600; }
+.tag.journal { background: #dcfce7; color: #15803d; }
+.tag.conf { background: #fef9c3; color: #a16207; }
+
+/* 引用框 */
+.citation-area {
+  background: #f8fafc; border: 1px dashed #cbd5e1; border-radius: 4px; padding: 8px;
+  font-family: 'Courier New', monospace; font-size: 11px; color: #334155; margin-bottom: 8px;
+  word-break: break-all; position: relative;
+}
+
+/* 按钮组 */
+.actions { display: flex; gap: 8px; }
+.btn-outline {
+  flex: 1; padding: 4px 0; border: 1px solid #d1d5db; background: white; color: #374151;
+  border-radius: 4px; font-size: 11px; cursor: pointer; display: flex; align-items: center; justify-content: center; gap: 4px;
+}
+.btn-outline:hover { background: #f3f4f6; border-color: #9ca3af; }
+
+/* 设置面板 */
+#settingsPanel {
+  display: none; background: white; padding: 12px; border-radius: 8px; border: 1px solid var(--border); margin-bottom: 16px;
+}
+#settingsPanel.active { display: block; }
+.settings-label { font-size: 12px; font-weight: 600; margin-bottom: 4px; display: block; }
+
+/* 状态提示 */
+.status-msg { text-align: center; color: var(--text-sub); font-size: 13px; margin-top: 20px; }
+.error-msg { color: #ef4444; }

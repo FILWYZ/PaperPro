@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <title>PaperPro</title>
+  <link rel="stylesheet" href="sidepanel.css">
+</head>
+<body>
+  
+  <div class="header">
+    <h2>📚 PaperPro</h2>
+    <button id="toggleSettings" class="icon-btn" title="设置镜像">⚙️</button>
+  </div>
+
+  <!-- 设置面板 (默认隐藏) -->
+  <div id="settingsPanel">
+    <label class="settings-label">自定义 Google Scholar 镜像地址：</label>
+    <input type="text" id="mirrorUrl" placeholder="例如: https://scholar.google.com.hk" style="width: 90%; margin-bottom: 8px;">
+    <button id="saveSettings" class="btn-primary" style="width: 100%;">保存设置</button>
+  </div>
+
+  <div class="search-container">
+    <input type="text" id="searchInput" placeholder="粘贴论文标题、DOI或关键词...">
+    <button id="searchBtn" class="btn-primary">搜索</button>
+  </div>
+
+  <div id="statusArea" class="status-msg"></div>
+  <div id="resultsArea"></div>
+
+  <script src="sidepanel.js"></script>
+</body>
+</html>
